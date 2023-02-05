@@ -21,7 +21,7 @@ import { RouterLink } from 'vue-router';
 
 // CONST
 
-    const baseStyle = 'px-6 py-2 text-center rounded-lg text-sm hover:opacity-80 transition-all';
+    const baseStyle = 'px-6 py-2 text-center rounded-lg text-sm hover:opacity-80 transition-all h-fit';
 
 // END CONST
 
@@ -30,7 +30,7 @@ import { RouterLink } from 'vue-router';
     interface Props{
         as : 'button' | 'link'
         background : 'bg-second-blue'
-        text : 'text-black'
+        text : 'text-black' | 'text-blue'
         to? : string
     }
 

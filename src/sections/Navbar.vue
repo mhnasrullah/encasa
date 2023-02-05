@@ -1,5 +1,5 @@
 <template>
-    <nav class="py-4">
+    <nav class="py-4 fixed z-[10000] w-full bg-pure-white">
         <Box class="md:flex md:justify-between">
             <div class="w-full md:w-fit flex justify-between relative z-10">
                 <Logo/>
@@ -10,7 +10,7 @@
                 </button>
             </div>
             <div 
-            :class="state.isShow ? '-right-full' : 'right-0'"
+            :class="!state.isShow ? '-right-full' : 'right-0'"
             class="fixed md:static md:flex-row flex transition-all md:space-x-6 flex-col w-full md:w-fit px-4 md:px-0 h-screen md:h-fit pt-16 md:pt-0 space-y-2 md:space-y-0 md:items-center bg-pure-white top-0">
                 <RouterLink 
                 v-for="({name,path},i) in data" 
@@ -47,6 +47,8 @@ const {path : pathActive} = useRoute();
     })
     
 // END STATE
+
+console.log(state.isShow)
 
 // METHODS
     
